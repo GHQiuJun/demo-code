@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--xml混合java config 显式装配-->
+    <bean class="demo.entity.BeanConfig"/>
+
+    <bean id="user" class="demo.entity.User">
+        <constructor-arg type="demo.entity.User1" ref="user1"/>
+        <constructor-arg type="demo.entity.Teacher" ref="teacher"/>
+        <property name="name" value="user"/>
+        <property name="age" value="12"/>
+    </bean>
+
+    <bean id="user1" class="demo.entity.User1">
+        <property name="name" value="user1"/>
+    </bean>
+</beans>
