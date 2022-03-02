@@ -17,3 +17,6 @@
 - spring source code 5.0.x
 
 ### spring-study-demo
+
+### demo-spring-car-boot-starter
+- a test spring boot starter
