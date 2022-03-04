@@ -11,7 +11,7 @@ import java.net.URL;
  **/
 public class JavaUrlTest {
     public static void main(String[] args) throws IOException {
-        URL url = new URL("http://www.baidu.com");
+        URL url = new URL("https://www.baidu.com");
         InputStream in = url.openStream();
     }
 }
