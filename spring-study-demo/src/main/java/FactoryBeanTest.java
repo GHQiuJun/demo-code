@@ -1,4 +1,3 @@
-import demo.entity.Parent;
 import demo.entity.ParentOther;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;

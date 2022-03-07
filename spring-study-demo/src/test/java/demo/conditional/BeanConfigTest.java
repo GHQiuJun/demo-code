@@ -23,6 +23,7 @@ class BeanConfigTest {
 
     @Test
     void testNoConditional() {
+        applicationContext = new AnnotationConfigApplicationContext(BeanConfig.class);
         System.out.println(applicationContext.getBean(Dog.class));
         System.out.println(applicationContext.getBean(Cat.class));
         System.out.println("没有设置条件加载，Cat、Dog均被加载入容器");
