@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "demo.car.name",
+      "type": "java.lang.String",
+      "description": "Description for demo.car.name."
+    }
+  ] }

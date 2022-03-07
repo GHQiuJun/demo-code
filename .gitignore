@@ -32,5 +32,4 @@ build/
 ### VS Code ###
 .vscode/
 
-### submodule  spring-framework
-spring-framework/
+.DS_Store
