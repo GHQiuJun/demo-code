@@ -2,10 +2,7 @@ package demo.conditional;
 
 import demo.conditional.entity.*;
 //import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Conditional;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
+import org.springframework.context.annotation.*;
 
 /**
  * @program: BeanConfig
@@ -14,6 +11,7 @@ import org.springframework.context.annotation.Import;
  * @create: 2022-02-23 14:53
  **/
 @Configuration
+@Scope
 public class BeanConfig {
     @Bean
     public Cat cat() {
