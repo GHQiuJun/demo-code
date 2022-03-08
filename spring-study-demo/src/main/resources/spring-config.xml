@@ -7,6 +7,6 @@
         <property name="name" value="test1"/>
     </bean>
 
-    <bean id="parent" class="demo.entity.Parent">
+    <bean id="parent" class="demo.entity.ParentFactoryBean">
     </bean>
 </beans>

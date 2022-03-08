@@ -8,7 +8,7 @@ import org.springframework.beans.factory.FactoryBean;
  * @author: 60007949
  * @create: 2022-02-08 14:57
  **/
-public class Parent implements FactoryBean<ParentOther> {
+public class ParentFactoryBean implements FactoryBean<ParentOther> {
     @Override
     public ParentOther getObject() throws Exception {
         return new ParentOther();

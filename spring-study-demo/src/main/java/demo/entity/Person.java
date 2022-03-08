@@ -31,4 +31,8 @@ public class Person {
     public String toString() {
         return "Person : name = " + name;
     }
+
+    public String toString1() {
+        return getClass().getName() + "@" + Integer.toHexString(hashCode());
+    }
 }
