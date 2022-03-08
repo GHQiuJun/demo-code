@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
  * @author: 60007949
  * @create: 2022-02-25 17:07
  **/
-@Configuration
+//@Configuration
 //@Component
 /**
  * @Configuration full 模式
@@ -37,14 +37,22 @@ public class TestBeanConfig {
 
     @Bean
     public Person person() {
+        System.out.println("person() : " + System.currentTimeMillis());
         return new Person("TestBeanConfig");
     }
 
+    public void test() {
+        System.out.println("test(): " + System.currentTimeMillis());
+    }
+
     @Bean
-    public ParentOther parentOther() {
+    public ParentOther parentOther(Person person) {
+        test();
+        test();
         System.out.println("模拟调用两次person()是否会生成两个不同对象");
-        System.out.println(person().toString1());
-        System.out.println(person().toString1());
+        // System.out.println(person().toString1());
+        // System.out.println(person().toString1());
+        System.out.println(person);
         return new ParentOther();
     }
 }
