@@ -9,4 +9,14 @@
 
     <bean id="parent" class="demo.entity.ParentFactoryBean">
     </bean>
+
+    <bean id="expandPointTest" class="demo.expandpoint.ExpandPoint" init-method="init">
+        <property name="name" value="name_xml"/>
+    </bean>
+
+    <bean id="testBeanFactoryPostProcessor" class="demo.expandpoint.TestBeanFactoryPostProcessor">
+    </bean>
+
+    <bean id="testBeanPostProcessor" class="demo.expandpoint.TestBeanPostProcessor">
+    </bean>
 </beans>
