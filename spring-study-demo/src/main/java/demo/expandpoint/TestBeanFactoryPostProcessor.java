@@ -8,11 +8,12 @@ import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 
 /**
  * 1、BeanFactoryPostProcessor 在 bean 实例化之前被调用
- * 2、BeanFactoryPostProcessor 修改BD原数据
+ * 2、BeanFactoryPostProcessor 读取BD（元数据），修改BD原数据
  *
  * @author junqiu
  */
 public class TestBeanFactoryPostProcessor implements BeanFactoryPostProcessor {
+
     @Override
     public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
         System.out.println("运行TestFactoryPostProcessor.postProcessBeanFactory");

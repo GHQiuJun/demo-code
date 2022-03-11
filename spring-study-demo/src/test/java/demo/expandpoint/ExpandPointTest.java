@@ -19,7 +19,7 @@ class ExpandPointTest {
     }
 
     @Test
-    void testBeanFactoryProcessor() {
+    void testExpandPoint() {
         Person person = applicationContext.getBean(Person.class);
         System.out.println(person);
 
