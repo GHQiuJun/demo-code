@@ -1,7 +1,8 @@
 package demo.expandpoint;
 
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.beans.factory.annotation.Autowired;
+
+import javax.annotation.PostConstruct;
 
 /**
  * @author junqiu
@@ -17,12 +18,17 @@ public class ExpandPoint implements InitializingBean {
         this.name = name;
     }
 
-    public void init(){
+    @PostConstruct
+    public void testPostConstruct() {
+        System.out.println("this is a testPostConstruct");
+    }
+
+    public void init() {
         System.out.println("调用init method");
     }
 
     @Override
-    public void afterPropertiesSet(){
+    public void afterPropertiesSet() {
         System.out.println("调用afterPropertiesSet修改属性值");
     }
 
