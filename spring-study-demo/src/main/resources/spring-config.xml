@@ -22,4 +22,7 @@
 
     <bean id="testBeanPostProcessor" class="demo.expandpoint.TestBeanPostProcessor">
     </bean>
+
+    <bean id="testAware" class="demo.entity.TestAware">
+    </bean>
 </beans>
