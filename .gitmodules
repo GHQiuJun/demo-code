@@ -1,3 +1,6 @@
 [submodule "spring-framework-study"]
 	path = spring-framework-study
 	url = git@github.com:GHQiuJun/spring-framework-study.git
+[submodule "spring-framework"]
+	path = spring-framework
+	url = git@github.com:GHQiuJun/spring-framework.git
