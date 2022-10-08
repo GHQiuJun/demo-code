@@ -20,8 +20,8 @@ class UserMapperTest {
         String resource = "mybatis-config.xml";
         InputStream inputStream = Resources.getResourceAsStream(resource);
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
-        SqlSession session = sqlSessionFactory.openSession();
-        SqlSession session1 = sqlSessionFactory.openSession();
+        SqlSession session = sqlSessionFactory.openSession(true);
+        SqlSession session1 = sqlSessionFactory.openSession(true);
         try {
             UserMapper mapper = session.getMapper(UserMapper.class);
             mapper.selectUserById(1);

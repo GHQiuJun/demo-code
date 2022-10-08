@@ -17,4 +17,22 @@
         where id = #{id}
     </select>
 
+    <insert id="insertUser" parameterType="demo.database.mybatis.entity.User">
+        INSERT INTO user (name, age)
+        VALUES (#{name}, #{age})
+    </insert>
+
+    <delete id="deleteAllUsers">
+        delete from user
+    </delete>
+
+    <insert id="insertBatch">
+        INSERT INTO user
+        (name, age)
+        VALUES
+        <foreach collection="userList" item="user" separator=",">
+            #{name}, #{age})
+        </foreach>
+    </insert>
+
 </mapper>

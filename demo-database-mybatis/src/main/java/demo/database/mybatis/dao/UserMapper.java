@@ -1,6 +1,8 @@
 package demo.database.mybatis.dao;
 
-import demo.database.mybatis.entity.User;
+import demo.database.mybatis.entity.User;;
+
+import java.util.List;
 
 /**
  * @program: UserMapper
@@ -23,5 +25,25 @@ public interface UserMapper {
      * @param user
      * @return
      */
-    int updateUser(User user);
+    void updateUser(User user);
+
+    /**
+     * 插入user
+     *
+     * @param user user
+     * @return
+     */
+    void insertUser(User user);
+
+    /**
+     * 删除user表所有数据
+     */
+    void deleteAllUsers();
+
+    /**
+     * 批量插入
+     *
+     * @param users user集合
+     */
+    void insertBatch(List<User> users);
 }
